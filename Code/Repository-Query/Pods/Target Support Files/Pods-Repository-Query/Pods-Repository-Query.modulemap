@@ -1,0 +1,6 @@
+framework module Pods_Repository_Query {
+  umbrella header "Pods-Repository-Query-umbrella.h"
+
+  export *
+  module * { export * }
+}
