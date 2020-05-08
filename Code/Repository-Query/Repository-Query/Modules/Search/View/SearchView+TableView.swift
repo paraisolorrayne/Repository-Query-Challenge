@@ -21,6 +21,11 @@ extension SearchView: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.delegate?.navigateToNextPage()
+        let full_name = self.viewModel.items.first?.fullName ?? ""
+        self.delegate?.navigateToNextPage(fullName: full_name)
+    }
+
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 300
     }
 }

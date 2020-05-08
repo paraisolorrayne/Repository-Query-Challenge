@@ -14,28 +14,17 @@ class DetailFlowCoordinator: Coordinator  {
     
     fileprivate let navigationController: UINavigationController
     fileprivate let detailViewController: DetailView
-    fileprivate let navigationDelegate: NavigationControllerDelegate?
     weak var delegate: SearchFlowCoordinatorDelegate?
     
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
-        navigationDelegate = NavigationControllerDelegate()
-        self.navigationController.delegate = navigationDelegate
-        self.detailViewController = DetailView()
+        self.detailViewController = DetailView(fullName: "")!
     }
     
     func start() {
+        detailViewController.modalPresentationStyle = .fullScreen
         detailViewController.delegate = self
-        
-        guard let topViewController = navigationController.topViewController else {
-            return navigationController.setViewControllers([detailViewController], animated: false)
-        }
-        
-        detailViewController.view.frame = topViewController.view.frame
-        UIView.transition(from:topViewController.view, to: detailViewController.view, duration: 0.50, options: .transitionCrossDissolve) {[unowned self] (_) in
-            self.navigationController.setViewControllers([self.detailViewController], animated: false)
-        }
-        
+        navigationController.viewControllers.append(detailViewController)
     }
     
     fileprivate func popViewController() {

@@ -14,28 +14,17 @@ class SearchFlowCoordinator: Coordinator  {
 
     fileprivate let navigationController: UINavigationController
     fileprivate let searchViewController: SearchView
-    fileprivate let navigationDelegate: NavigationControllerDelegate?
     weak var delegate: SearchFlowCoordinatorDelegate?
 
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
-        navigationDelegate = NavigationControllerDelegate()
-        self.navigationController.delegate = navigationDelegate
         self.searchViewController = SearchView()
     }
 
     func start() {
+        searchViewController.modalPresentationStyle = .fullScreen
         searchViewController.delegate = self
-        
-        guard let topViewController = navigationController.topViewController else {
-            return navigationController.setViewControllers([searchViewController], animated: false)
-        }
-        
-        searchViewController.view.frame = topViewController.view.frame
-        UIView.transition(from:topViewController.view, to: searchViewController.view, duration: 0.50, options: .transitionCrossDissolve) {[unowned self] (_) in
-            self.navigationController.setViewControllers([self.searchViewController], animated: false)
-        }
-        
+        navigationController.viewControllers.append(searchViewController)
     }
 
     fileprivate func popViewController() {
@@ -46,17 +35,17 @@ class SearchFlowCoordinator: Coordinator  {
         navigationController.dismiss(animated: true, completion: nil)
     }
 
-    fileprivate func presentDetailViewController() {
-        let detailsViewController = DetailView()
-//        detailsViewController.delegate = self
-        navigationController.pushViewController(detailsViewController, animated: true)
+    fileprivate func presentDetailViewController(fullName: String) {
+        let detailsViewController = DetailView(fullName: fullName)
+        navigationController.pushViewController(detailsViewController!, animated: true)
         
     }
 
 }
 
 extension SearchFlowCoordinator: SearchViewDelegate {
-    func navigateToNextPage() {
-        presentDetailViewController()
+    
+    func navigateToNextPage(fullName: String) {
+        presentDetailViewController(fullName: fullName)
     }
 }

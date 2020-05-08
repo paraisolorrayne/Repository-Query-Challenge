@@ -31,9 +31,8 @@
 		391419672465055C00AB7D68 /* RepositoryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391419632465055C00AB7D68 /* RepositoryItem.swift */; };
 		39141969246525C700AB7D68 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39141968246525C700AB7D68 /* AppCoordinator.swift */; };
 		3914196B2465266B00AB7D68 /* SearchFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3914196A2465266B00AB7D68 /* SearchFlowCoordinator.swift */; };
-		3914196D2465284100AB7D68 /* NavigationControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3914196C2465284100AB7D68 /* NavigationControllerDelegate.swift */; };
-		3914196F246528A600AB7D68 /* NavigationAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3914196E246528A600AB7D68 /* NavigationAnimator.swift */; };
-		3914197124652C3100AB7D68 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3914197024652C3100AB7D68 /* DetailViewController.xib */; };
+		3914197324658CAF00AB7D68 /* DetailPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3914197224658CAF00AB7D68 /* DetailPath.swift */; };
+		391419752465CCAC00AB7D68 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 391419742465CCAC00AB7D68 /* DetailViewController.xib */; };
 		39E2C27A24634C0100E06BF3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E2C27924634C0100E06BF3 /* AppDelegate.swift */; };
 		39E2C28124634C0400E06BF3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39E2C28024634C0400E06BF3 /* Assets.xcassets */; };
 		39E2C28424634C0400E06BF3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39E2C28224634C0400E06BF3 /* LaunchScreen.storyboard */; };
@@ -85,9 +84,8 @@
 		391419632465055C00AB7D68 /* RepositoryItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryItem.swift; sourceTree = "<group>"; };
 		39141968246525C700AB7D68 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		3914196A2465266B00AB7D68 /* SearchFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFlowCoordinator.swift; sourceTree = "<group>"; };
-		3914196C2465284100AB7D68 /* NavigationControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerDelegate.swift; sourceTree = "<group>"; };
-		3914196E246528A600AB7D68 /* NavigationAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationAnimator.swift; sourceTree = "<group>"; };
-		3914197024652C3100AB7D68 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		3914197224658CAF00AB7D68 /* DetailPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPath.swift; sourceTree = "<group>"; };
+		391419742465CCAC00AB7D68 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		39E2C27624634C0100E06BF3 /* Repository-Query.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Repository-Query.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		39E2C27924634C0100E06BF3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		39E2C28024634C0400E06BF3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -184,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				3914192824638F4100AB7D68 /* DetailModel.swift */,
+				3914197224658CAF00AB7D68 /* DetailPath.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -192,7 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				3914192A24638F4100AB7D68 /* DetailView.swift */,
-				3914197024652C3100AB7D68 /* DetailViewController.xib */,
+				391419742465CCAC00AB7D68 /* DetailViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -277,8 +276,6 @@
 			isa = PBXGroup;
 			children = (
 				39141968246525C700AB7D68 /* AppCoordinator.swift */,
-				3914196C2465284100AB7D68 /* NavigationControllerDelegate.swift */,
-				3914196E246528A600AB7D68 /* NavigationAnimator.swift */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -500,7 +497,7 @@
 			files = (
 				39E2C28424634C0400E06BF3 /* LaunchScreen.storyboard in Resources */,
 				39E2C28124634C0400E06BF3 /* Assets.xcassets in Resources */,
-				3914197124652C3100AB7D68 /* DetailViewController.xib in Resources */,
+				391419752465CCAC00AB7D68 /* DetailViewController.xib in Resources */,
 				39141958246435AF00AB7D68 /* SearchViewController.xib in Resources */,
 				3914195B2464FEE600AB7D68 /* RepositoryTableViewCell.xib in Resources */,
 			);
@@ -634,7 +631,6 @@
 				39141956246397EA00AB7D68 /* Reach.swift in Sources */,
 				3914193224638F4100AB7D68 /* DetailService.swift in Sources */,
 				3914194E2463935C00AB7D68 /* DetailFlowCoordinator.swift in Sources */,
-				3914196D2465284100AB7D68 /* NavigationControllerDelegate.swift in Sources */,
 				3914193024638F4100AB7D68 /* DetailModel.swift in Sources */,
 				39141969246525C700AB7D68 /* AppCoordinator.swift in Sources */,
 				391419662465055C00AB7D68 /* RepositoryOwner.swift in Sources */,
@@ -645,11 +641,11 @@
 				391419672465055C00AB7D68 /* RepositoryItem.swift in Sources */,
 				3914194524638F6500AB7D68 /* SearchViewModel.swift in Sources */,
 				3914195F2465029D00AB7D68 /* SearchView+TableView.swift in Sources */,
-				3914196F246528A600AB7D68 /* NavigationAnimator.swift in Sources */,
 				391419512463955B00AB7D68 /* SearchViewController.swift in Sources */,
 				39141954246397B200AB7D68 /* APIManager.swift in Sources */,
 				391419652465055C00AB7D68 /* RepositoryLicense.swift in Sources */,
 				3914192F24638F4100AB7D68 /* DetailServiceProtocol.swift in Sources */,
+				3914197324658CAF00AB7D68 /* DetailPath.swift in Sources */,
 				3914193124638F4100AB7D68 /* DetailView.swift in Sources */,
 				3914196B2465266B00AB7D68 /* SearchFlowCoordinator.swift in Sources */,
 				39E2C27A24634C0100E06BF3 /* AppDelegate.swift in Sources */,
@@ -822,13 +818,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5RYX8M6JM8;
+				DEVELOPMENT_TEAM = 9C877HQB6E;
 				INFOPLIST_FILE = "Repository-Query/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "br.com.zeedog.Repository-Query";
+				PRODUCT_BUNDLE_IDENTIFIER = kanttum.teach.growth;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -841,13 +837,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5RYX8M6JM8;
+				DEVELOPMENT_TEAM = 9C877HQB6E;
 				INFOPLIST_FILE = "Repository-Query/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "br.com.zeedog.Repository-Query";
+				PRODUCT_BUNDLE_IDENTIFIER = kanttum.teach.growth;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

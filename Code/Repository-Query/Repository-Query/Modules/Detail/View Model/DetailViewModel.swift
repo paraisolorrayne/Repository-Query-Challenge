@@ -14,13 +14,11 @@ class DetailViewModel {
 
     private var model: [DetailModel] = [DetailModel]() {
         didSet {
-            self.count = self.model.count
+            self.base64String = self.model.first?.content as! String
         }
     }
-
-    /// Count your data in model
-    var count: Int = 0
-
+    
+    var base64String: String = ""
     //MARK: -- Network checking
 
     /// Define networkStatus for check network connection
@@ -74,17 +72,17 @@ class DetailViewModel {
     }
 
     //MARK: -- Example Func
-    func exampleBind() {
+    func fetchReadme(with fullName: String) {
         switch networkStatus {
         case .offline:
             self.isDisconnected = true
             self.internetConnectionStatus?()
         case .online:
             // call your service here
-            self.service.removeThisFuncName(success: { data in
+            self.service.fetchReadme(with: fullName, success: { data in
                 
                 self.isLoading = false
-                // self.model = data
+                 self.model = [data]
                 self.didGetData?()
                 
             }) { self.isLoading = false
@@ -96,6 +94,3 @@ class DetailViewModel {
 
 }
 
-extension DetailViewModel {
-
-}

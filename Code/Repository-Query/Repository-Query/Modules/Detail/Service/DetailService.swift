@@ -10,11 +10,9 @@ import Foundation
 import Alamofire
 
 class DetailService: DetailServiceProtocol {
-    // Call protocol function
+    func fetchReadme(with fullName: String, success: @escaping (DetailModel) -> (), failure: @escaping () -> ()) {
 
-    func removeThisFuncName(success: @escaping(_ data: DetailModel) -> (), failure: @escaping() -> ()) {
-
-        let url = ""
+        let url = "repos/\(fullName)/contents/README.md?ref=master"
 
         APIManager.request(
             url,

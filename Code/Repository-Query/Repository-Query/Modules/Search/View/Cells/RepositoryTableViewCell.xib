@@ -9,7 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RepositoryTableViewCell" rowHeight="190" id="JD5-yv-HV9" customClass="RepositoryTableViewCell" customModule="Repository_Query" customModuleProvider="target">
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RepositoryTableViewCell" id="JD5-yv-HV9" customClass="RepositoryTableViewCell" customModule="Repository_Query" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="414" height="190"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JD5-yv-HV9" id="1gc-KQ-u9q">
@@ -105,7 +105,7 @@
                 <outlet property="repositoryDescriptionLabel" destination="BCL-hq-d7f" id="nf0-AM-4M7"/>
                 <outlet property="repositoryNameLabel" destination="ZF2-7s-M4z" id="E9S-lf-zXF"/>
             </connections>
-            <point key="canvasLocation" x="-255.07246376811597" y="39.508928571428569"/>
+            <point key="canvasLocation" x="39" y="36"/>
         </tableViewCell>
     </objects>
     <resources>

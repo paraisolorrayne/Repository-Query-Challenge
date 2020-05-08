@@ -17,6 +17,6 @@ protocol DetailServiceProtocol {
     ///                 example: success(_ data: YourModelName) -> ()
     ///   - failure: -- failure closure response, add your Model on this closure.  
     ///                 example: success(_ data: APIError) -> ()
-    func removeThisFuncName(success: @escaping(_ data: DetailModel) -> (), failure: @escaping() -> ())
+    func fetchReadme(with fullName: String, success: @escaping(_ data: DetailModel) -> (), failure: @escaping() -> ())
 
 }
