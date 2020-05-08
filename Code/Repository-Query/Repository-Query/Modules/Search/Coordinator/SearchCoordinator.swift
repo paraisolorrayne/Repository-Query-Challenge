@@ -20,8 +20,8 @@ class SearchCoordinator: Coordinator {
     }
     
     func start() {
-        let searchViewController = SearchView()
-        searchViewController.delegate = self
+        let searchViewController = SearchViewController()
+        searchViewController.searchView.delegate = self
         self.navigationController.viewControllers = [searchViewController]
     }
 }

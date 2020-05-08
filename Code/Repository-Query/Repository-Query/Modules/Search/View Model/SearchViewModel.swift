@@ -74,14 +74,14 @@ class SearchViewModel {
     }
 
     //MARK: -- Example Func
-    func exampleBind() {
+    func fetchRepositoryBy(languageName: String) {
         switch networkStatus {
         case .offline:
             self.isDisconnected = true
             self.internetConnectionStatus?()
         case .online:
             // call your service here
-            self.service.removeThisFuncName(success: { data in
+            self.service.fetchRepositoryBy(languageName: languageName, success: { data in
                 
                 self.isLoading = false
 //                self.model = data

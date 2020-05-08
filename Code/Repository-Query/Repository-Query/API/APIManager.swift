@@ -39,9 +39,9 @@ struct APIManager {
         
         manager = Alamofire.Session(configuration: configuration)
         
-        let apiURL = "baseURL" + url
+        let apiURL = "https://api.github.com/" + url
         print("-- URL API: \(apiURL), \n\n-- headers: \(headers), \n\n-- Parameters: \(parameters)")
-        
+        print(apiURL)
         manager.request(
             apiURL,
             method: method,

@@ -17,6 +17,6 @@ protocol SearchServiceProtocol {
     ///                 example: success(_ data: YourModelName) -> ()
     ///   - failure: -- failure closure response, add your Model on this closure.  
     ///                 example: success(_ data: APIError) -> ()
-    func removeThisFuncName(success: @escaping(_ data: SearchModel) -> (), failure: @escaping() -> ())
+    func fetchRepositoryBy(languageName: String, success: @escaping(_ data: SearchModel) -> (), failure: @escaping() -> ())
 
 }

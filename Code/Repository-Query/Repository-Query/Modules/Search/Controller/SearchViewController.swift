@@ -11,12 +11,14 @@ import UIKit
 final class SearchViewController: UIViewController {
     
     let searchView = SearchView()
-    
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        loadView()
+    }
+
     override func loadView() {
         self.view = searchView.view
     }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("This View is not intended to be instantiated via Storyboard")
-    }
+
 }
