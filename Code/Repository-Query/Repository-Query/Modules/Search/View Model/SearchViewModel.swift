@@ -12,14 +12,16 @@ class SearchViewModel {
 
     private let service: SearchServiceProtocol
 
-    private var model: [SearchModel] = [SearchModel]() {
+    var model: [SearchModel] = [SearchModel]() {
         didSet {
-            self.count = self.model.count
+            self.items = self.model.first?.items as! [RepositoryItem]
+            self.count = self.items.count as! Int
         }
     }
 
     /// Count your data in model
     var count: Int = 0
+    var items: [RepositoryItem] = []
 
     //MARK: -- Network checking
 
@@ -84,7 +86,7 @@ class SearchViewModel {
             self.service.fetchRepositoryBy(languageName: languageName, success: { data in
                 
                 self.isLoading = false
-//                self.model = data
+                self.model = [data]
                 self.didGetData?()
                 
             }) {

@@ -20,14 +20,15 @@ class SearchView: UIViewController {
     // VARIABLES HERE
     var viewModel = SearchViewModel()
     weak var delegate: SearchViewDelegate?
-    let tableView = UITableView()
+    var tableView: UITableView! = nil
     var safeArea: UILayoutGuide!
+    var model: [RepositoryItem]!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Repositórios"
+        setupTableView()
         setupViewModel()
-        setStateScreen()
     }
     
     fileprivate func setupViewModel() {
@@ -55,17 +56,21 @@ class SearchView: UIViewController {
             // show UI Server is Error
         }
 
-        self.viewModel.didGetData = {
-            // update UI after get data
-            self.tableView.reloadData()
-        }
         self.viewModel.fetchRepositoryBy(languageName: "swift")
+        
+        
+        self.viewModel.didGetData = {
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+        
 
     }
 
     fileprivate func setStateScreen() {
         
-        if viewModel.count > 0 {
+        if viewModel.count < 0 {
             let emptyView = UIView(frame: self.bodyView.frame)
             let emptyImage = UIImageView(image: UIImage(named: "empty"))
             emptyView.addSubview(emptyImage)
@@ -76,17 +81,20 @@ class SearchView: UIViewController {
     }
 
     func setupTableView() {
+        tableView = UITableView()
+        tableView.delegate = self
+        tableView.dataSource = self
         safeArea = view.layoutMarginsGuide
-      view.addSubview(tableView)
-      tableView.translatesAutoresizingMaskIntoConstraints = false
-      tableView.topAnchor.constraint(equalTo: safeArea.topAnchor).isActive = true
-      tableView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
-      tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-      tableView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
-    }
-
-    @IBAction func goToSecondPageAction(_ sender: Any) {
-        self.delegate?.navigateToNextPage()
+        let nib = UINib(nibName: "RepositoryTableViewCell", bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: "\(RepositoryTableViewCell.self)")
+        view.addSubview(tableView)
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.topAnchor.constraint(equalTo: safeArea.topAnchor).isActive = true
+        tableView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
+        tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        tableView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 300
     }
     
 }

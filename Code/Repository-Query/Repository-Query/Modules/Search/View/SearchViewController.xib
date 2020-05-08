@@ -41,6 +41,7 @@
             </view>
             <connections>
                 <outlet property="bodyView" destination="A1o-10-fP0" id="AaE-Cj-kyN"/>
+                <outlet property="searchBar" destination="J69-cH-y3m" id="6PW-G4-cOo"/>
             </connections>
             <point key="canvasLocation" x="47" y="94"/>
         </viewController>

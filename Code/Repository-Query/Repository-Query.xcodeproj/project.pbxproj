@@ -25,6 +25,12 @@
 		39141954246397B200AB7D68 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39141953246397B200AB7D68 /* APIManager.swift */; };
 		39141956246397EA00AB7D68 /* Reach.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39141955246397EA00AB7D68 /* Reach.swift */; };
 		39141958246435AF00AB7D68 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39141957246435AF00AB7D68 /* SearchViewController.xib */; };
+		3914195B2464FEE600AB7D68 /* RepositoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3914195A2464FEE600AB7D68 /* RepositoryTableViewCell.xib */; };
+		3914195D2464FEFE00AB7D68 /* RepositoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3914195C2464FEFE00AB7D68 /* RepositoryTableViewCell.swift */; };
+		3914195F2465029D00AB7D68 /* SearchView+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3914195E2465029D00AB7D68 /* SearchView+TableView.swift */; };
+		391419652465055C00AB7D68 /* RepositoryLicense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391419612465055C00AB7D68 /* RepositoryLicense.swift */; };
+		391419662465055C00AB7D68 /* RepositoryOwner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391419622465055C00AB7D68 /* RepositoryOwner.swift */; };
+		391419672465055C00AB7D68 /* RepositoryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391419632465055C00AB7D68 /* RepositoryItem.swift */; };
 		39E2C27A24634C0100E06BF3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E2C27924634C0100E06BF3 /* AppDelegate.swift */; };
 		39E2C28124634C0400E06BF3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39E2C28024634C0400E06BF3 /* Assets.xcassets */; };
 		39E2C28424634C0400E06BF3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39E2C28224634C0400E06BF3 /* LaunchScreen.storyboard */; };
@@ -70,6 +76,12 @@
 		39141953246397B200AB7D68 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		39141955246397EA00AB7D68 /* Reach.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reach.swift; sourceTree = "<group>"; };
 		39141957246435AF00AB7D68 /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
+		3914195A2464FEE600AB7D68 /* RepositoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositoryTableViewCell.xib; sourceTree = "<group>"; };
+		3914195C2464FEFE00AB7D68 /* RepositoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryTableViewCell.swift; sourceTree = "<group>"; };
+		3914195E2465029D00AB7D68 /* SearchView+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchView+TableView.swift"; sourceTree = "<group>"; };
+		391419612465055C00AB7D68 /* RepositoryLicense.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryLicense.swift; sourceTree = "<group>"; };
+		391419622465055C00AB7D68 /* RepositoryOwner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryOwner.swift; sourceTree = "<group>"; };
+		391419632465055C00AB7D68 /* RepositoryItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryItem.swift; sourceTree = "<group>"; };
 		39E2C27624634C0100E06BF3 /* Repository-Query.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Repository-Query.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		39E2C27924634C0100E06BF3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		39E2C28024634C0400E06BF3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -219,6 +231,9 @@
 		3914193924638F6500AB7D68 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				391419632465055C00AB7D68 /* RepositoryItem.swift */,
+				391419612465055C00AB7D68 /* RepositoryLicense.swift */,
+				391419622465055C00AB7D68 /* RepositoryOwner.swift */,
 				3914193A24638F6500AB7D68 /* SearchModel.swift */,
 			);
 			path = Model;
@@ -227,8 +242,10 @@
 		3914193B24638F6500AB7D68 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				391419592464FE9D00AB7D68 /* Cells */,
 				3914193C24638F6500AB7D68 /* SearchView.swift */,
 				39141957246435AF00AB7D68 /* SearchViewController.xib */,
+				3914195E2465029D00AB7D68 /* SearchView+TableView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -288,6 +305,15 @@
 				39141955246397EA00AB7D68 /* Reach.swift */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		391419592464FE9D00AB7D68 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				3914195A2464FEE600AB7D68 /* RepositoryTableViewCell.xib */,
+				3914195C2464FEFE00AB7D68 /* RepositoryTableViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		39E2C26D24634C0100E06BF3 = {
@@ -466,6 +492,7 @@
 				39E2C28424634C0400E06BF3 /* LaunchScreen.storyboard in Resources */,
 				39E2C28124634C0400E06BF3 /* Assets.xcassets in Resources */,
 				39141958246435AF00AB7D68 /* SearchViewController.xib in Resources */,
+				3914195B2464FEE600AB7D68 /* RepositoryTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -599,13 +626,18 @@
 				391419482463929500AB7D68 /* Coordinator.swift in Sources */,
 				3914194E2463935C00AB7D68 /* DetailCoordinator.swift in Sources */,
 				3914193024638F4100AB7D68 /* DetailModel.swift in Sources */,
+				391419662465055C00AB7D68 /* RepositoryOwner.swift in Sources */,
 				3914194424638F6500AB7D68 /* SearchService.swift in Sources */,
 				3914193324638F4100AB7D68 /* DetailViewModel.swift in Sources */,
 				3914194B246392D900AB7D68 /* SearchCoordinator.swift in Sources */,
+				3914195D2464FEFE00AB7D68 /* RepositoryTableViewCell.swift in Sources */,
 				3914194224638F6500AB7D68 /* SearchModel.swift in Sources */,
+				391419672465055C00AB7D68 /* RepositoryItem.swift in Sources */,
 				3914194524638F6500AB7D68 /* SearchViewModel.swift in Sources */,
+				3914195F2465029D00AB7D68 /* SearchView+TableView.swift in Sources */,
 				391419512463955B00AB7D68 /* SearchViewController.swift in Sources */,
 				39141954246397B200AB7D68 /* APIManager.swift in Sources */,
+				391419652465055C00AB7D68 /* RepositoryLicense.swift in Sources */,
 				3914192F24638F4100AB7D68 /* DetailServiceProtocol.swift in Sources */,
 				3914193124638F4100AB7D68 /* DetailView.swift in Sources */,
 				39E2C27A24634C0100E06BF3 /* AppDelegate.swift in Sources */,

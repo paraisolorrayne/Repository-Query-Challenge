@@ -30,10 +30,10 @@ extension SearchCoordinator: SearchViewDelegate {
 
     // Navigate to next page
     func navigateToNextPage() {
-//       let secondCoordinator = SecondCoordinator(navigationController: navigationController)
+       let secondCoordinator = DetailCoordinator(navigationController: navigationController)
 //       secondCoordinator.delegate = self
-//       childCoordinators.append(secondCoordinator)
-//       secondCoordinator.start()
+       childCoordinators.append(secondCoordinator)
+       secondCoordinator.start()
     }
 }
 //

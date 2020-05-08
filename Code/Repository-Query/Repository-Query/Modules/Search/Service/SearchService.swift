@@ -15,7 +15,6 @@ class SearchService: SearchServiceProtocol {
     func fetchRepositoryBy(languageName: String, success: @escaping(_ data: SearchModel) -> (), failure: @escaping() -> ()) {
 
         let url = "search/repositories"
-        //q=language&language:\(languageName)&sort=stars&order=desc&page=1&per_page=10
 
         let parameters: Parameters = [
             "q": "language",
