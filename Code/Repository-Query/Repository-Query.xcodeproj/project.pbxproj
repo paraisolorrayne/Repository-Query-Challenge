@@ -15,14 +15,11 @@
 		3914193324638F4100AB7D68 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3914192E24638F4100AB7D68 /* DetailViewModel.swift */; };
 		3914194124638F6500AB7D68 /* SearchServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3914193824638F6500AB7D68 /* SearchServiceProtocol.swift */; };
 		3914194224638F6500AB7D68 /* SearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3914193A24638F6500AB7D68 /* SearchModel.swift */; };
-		3914194324638F6500AB7D68 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3914193C24638F6500AB7D68 /* SearchView.swift */; };
 		3914194424638F6500AB7D68 /* SearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3914193E24638F6500AB7D68 /* SearchService.swift */; };
 		3914194524638F6500AB7D68 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3914194024638F6500AB7D68 /* SearchViewModel.swift */; };
 		3914194E2463935C00AB7D68 /* DetailFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3914194D2463935C00AB7D68 /* DetailFlowCoordinator.swift */; };
-		391419512463955B00AB7D68 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391419502463955B00AB7D68 /* SearchViewController.swift */; };
 		39141954246397B200AB7D68 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39141953246397B200AB7D68 /* APIManager.swift */; };
 		39141956246397EA00AB7D68 /* Reach.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39141955246397EA00AB7D68 /* Reach.swift */; };
-		39141958246435AF00AB7D68 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39141957246435AF00AB7D68 /* SearchViewController.xib */; };
 		3914195B2464FEE600AB7D68 /* RepositoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3914195A2464FEE600AB7D68 /* RepositoryTableViewCell.xib */; };
 		3914195D2464FEFE00AB7D68 /* RepositoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3914195C2464FEFE00AB7D68 /* RepositoryTableViewCell.swift */; };
 		3914195F2465029D00AB7D68 /* SearchView+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3914195E2465029D00AB7D68 /* SearchView+TableView.swift */; };
@@ -33,6 +30,8 @@
 		3914196B2465266B00AB7D68 /* SearchFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3914196A2465266B00AB7D68 /* SearchFlowCoordinator.swift */; };
 		3914197324658CAF00AB7D68 /* DetailPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3914197224658CAF00AB7D68 /* DetailPath.swift */; };
 		391419752465CCAC00AB7D68 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 391419742465CCAC00AB7D68 /* DetailViewController.xib */; };
+		396575D12466183600B26E5C /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396575CF2466183600B26E5C /* SearchViewController.swift */; };
+		396575D22466183600B26E5C /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 396575D02466183600B26E5C /* SearchViewController.xib */; };
 		39E2C27A24634C0100E06BF3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E2C27924634C0100E06BF3 /* AppDelegate.swift */; };
 		39E2C28124634C0400E06BF3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39E2C28024634C0400E06BF3 /* Assets.xcassets */; };
 		39E2C28424634C0400E06BF3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39E2C28224634C0400E06BF3 /* LaunchScreen.storyboard */; };
@@ -68,14 +67,11 @@
 		3914192E24638F4100AB7D68 /* DetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		3914193824638F6500AB7D68 /* SearchServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchServiceProtocol.swift; sourceTree = "<group>"; };
 		3914193A24638F6500AB7D68 /* SearchModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchModel.swift; sourceTree = "<group>"; };
-		3914193C24638F6500AB7D68 /* SearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		3914193E24638F6500AB7D68 /* SearchService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchService.swift; sourceTree = "<group>"; };
 		3914194024638F6500AB7D68 /* SearchViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		3914194D2463935C00AB7D68 /* DetailFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailFlowCoordinator.swift; sourceTree = "<group>"; };
-		391419502463955B00AB7D68 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		39141953246397B200AB7D68 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		39141955246397EA00AB7D68 /* Reach.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reach.swift; sourceTree = "<group>"; };
-		39141957246435AF00AB7D68 /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
 		3914195A2464FEE600AB7D68 /* RepositoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositoryTableViewCell.xib; sourceTree = "<group>"; };
 		3914195C2464FEFE00AB7D68 /* RepositoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryTableViewCell.swift; sourceTree = "<group>"; };
 		3914195E2465029D00AB7D68 /* SearchView+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchView+TableView.swift"; sourceTree = "<group>"; };
@@ -86,6 +82,8 @@
 		3914196A2465266B00AB7D68 /* SearchFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFlowCoordinator.swift; sourceTree = "<group>"; };
 		3914197224658CAF00AB7D68 /* DetailPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPath.swift; sourceTree = "<group>"; };
 		391419742465CCAC00AB7D68 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		396575CF2466183600B26E5C /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		396575D02466183600B26E5C /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
 		39E2C27624634C0100E06BF3 /* Repository-Query.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Repository-Query.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		39E2C27924634C0100E06BF3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		39E2C28024634C0400E06BF3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -215,7 +213,6 @@
 		3914193624638F6500AB7D68 /* Search */ = {
 			isa = PBXGroup;
 			children = (
-				3914194F2463954000AB7D68 /* Controller */,
 				39141949246392C800AB7D68 /* Coordinator */,
 				3914193724638F6500AB7D68 /* Protocol */,
 				3914193924638F6500AB7D68 /* Model */,
@@ -249,9 +246,9 @@
 			isa = PBXGroup;
 			children = (
 				391419592464FE9D00AB7D68 /* Cells */,
-				3914193C24638F6500AB7D68 /* SearchView.swift */,
-				39141957246435AF00AB7D68 /* SearchViewController.xib */,
 				3914195E2465029D00AB7D68 /* SearchView+TableView.swift */,
+				396575CF2466183600B26E5C /* SearchViewController.swift */,
+				396575D02466183600B26E5C /* SearchViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -294,14 +291,6 @@
 				3914194D2463935C00AB7D68 /* DetailFlowCoordinator.swift */,
 			);
 			path = Coordinator;
-			sourceTree = "<group>";
-		};
-		3914194F2463954000AB7D68 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				391419502463955B00AB7D68 /* SearchViewController.swift */,
-			);
-			path = Controller;
 			sourceTree = "<group>";
 		};
 		391419522463978E00AB7D68 /* API */ = {
@@ -498,8 +487,8 @@
 				39E2C28424634C0400E06BF3 /* LaunchScreen.storyboard in Resources */,
 				39E2C28124634C0400E06BF3 /* Assets.xcassets in Resources */,
 				391419752465CCAC00AB7D68 /* DetailViewController.xib in Resources */,
-				39141958246435AF00AB7D68 /* SearchViewController.xib in Resources */,
 				3914195B2464FEE600AB7D68 /* RepositoryTableViewCell.xib in Resources */,
+				396575D22466183600B26E5C /* SearchViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -627,7 +616,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3914194324638F6500AB7D68 /* SearchView.swift in Sources */,
 				39141956246397EA00AB7D68 /* Reach.swift in Sources */,
 				3914193224638F4100AB7D68 /* DetailService.swift in Sources */,
 				3914194E2463935C00AB7D68 /* DetailFlowCoordinator.swift in Sources */,
@@ -641,7 +629,7 @@
 				391419672465055C00AB7D68 /* RepositoryItem.swift in Sources */,
 				3914194524638F6500AB7D68 /* SearchViewModel.swift in Sources */,
 				3914195F2465029D00AB7D68 /* SearchView+TableView.swift in Sources */,
-				391419512463955B00AB7D68 /* SearchViewController.swift in Sources */,
+				396575D12466183600B26E5C /* SearchViewController.swift in Sources */,
 				39141954246397B200AB7D68 /* APIManager.swift in Sources */,
 				391419652465055C00AB7D68 /* RepositoryLicense.swift in Sources */,
 				3914192F24638F4100AB7D68 /* DetailServiceProtocol.swift in Sources */,

@@ -1,29 +1,28 @@
-//  
-//  SearchView.swift
+//
+//  SearchViewController.swift
 //  Repository-Query
 //
-//  Created by Lorrayne Paraiso on 06/05/20.
+//  Created by Lorrayne Paraiso on 08/05/20.
 //  Copyright © 2020 Zee-Dog. All rights reserved.
 //
 
 import UIKit
 
-protocol SearchViewDelegate: class {
+protocol SearchViewControllerDelegate: class {
     func navigateToNextPage(fullName: String)
 }
 
-class SearchView: UIViewController {
+class SearchViewController: UIViewController {
 
-    // OUTLETS HERE
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var bodyView: UIView!
     // VARIABLES HERE
     var viewModel = SearchViewModel()
-    weak var delegate: SearchViewDelegate?
+    weak var delegate: SearchViewControllerDelegate?
     var tableView: UITableView! = nil
     var safeArea: UILayoutGuide!
     var model: [RepositoryItem]!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Repositórios"
@@ -32,7 +31,7 @@ class SearchView: UIViewController {
     }
     
     fileprivate func setupViewModel() {
-
+        
         self.viewModel.showAlertClosure = {
             let alert = self.viewModel.alertMessage ?? ""
             print(alert)
@@ -42,20 +41,20 @@ class SearchView: UIViewController {
             if self.viewModel.isLoading {
                 print("LOADING...")
             } else {
-                 print("DATA READY")
+                print("DATA READY")
             }
         }
-
+        
         self.viewModel.internetConnectionStatus = {
             print("Internet disconnected")
             // show UI Internet is disconnected
         }
-
+        
         self.viewModel.serverErrorStatus = {
             print("Server Error / Unknown Error")
             // show UI Server is Error
         }
-
+        
         self.viewModel.fetchRepositoryBy(languageName: "swift")
         
         
@@ -65,13 +64,12 @@ class SearchView: UIViewController {
             }
         }
         
-
     }
-
+    
     fileprivate func setStateScreen() {
         
-        if viewModel.count < 0 {
-            let emptyView = UIView(frame: self.bodyView.frame)
+        if viewModel.count == 0 {
+            let emptyView = UIView(frame: self.bodyView.bounds)
             let emptyImage = UIImageView(image: UIImage(named: "empty"))
             emptyView.addSubview(emptyImage)
             bodyView.addSubview(emptyView)
@@ -79,25 +77,14 @@ class SearchView: UIViewController {
             setupTableView()
         }
     }
-
+    
     func setupTableView() {
-        tableView = UITableView()
+        tableView = UITableView(frame: bodyView.bounds)
         tableView.delegate = self
         tableView.dataSource = self
         safeArea = view.layoutMarginsGuide
-        tableView.rowHeight = UITableView.automaticDimension
-        tableView.estimatedRowHeight = 300
         let nib = UINib(nibName: "RepositoryTableViewCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "\(RepositoryTableViewCell.self)")
-        view.addSubview(tableView)
-        tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.topAnchor.constraint(equalTo: safeArea.topAnchor).isActive = true
-        tableView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
-        tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-        tableView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
-
+        bodyView.addSubview(tableView)
     }
-    
 }
-
-

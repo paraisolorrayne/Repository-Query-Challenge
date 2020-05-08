@@ -35,7 +35,6 @@ class SearchService: SearchServiceProtocol {
                 
                 // mapping data
                 do {
-                    print(data)
                     let decoded = try JSONDecoder().decode(SearchModel.self, from: data)
                     success(decoded)
                 } catch _ {

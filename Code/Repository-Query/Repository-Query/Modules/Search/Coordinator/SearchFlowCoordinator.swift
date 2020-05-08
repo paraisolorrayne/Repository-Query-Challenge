@@ -13,12 +13,12 @@ protocol SearchFlowCoordinatorDelegate:class { }
 class SearchFlowCoordinator: Coordinator  {
 
     fileprivate let navigationController: UINavigationController
-    fileprivate let searchViewController: SearchView
+    fileprivate let searchViewController: SearchViewController
     weak var delegate: SearchFlowCoordinatorDelegate?
 
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
-        self.searchViewController = SearchView()
+        self.searchViewController = SearchViewController()
     }
 
     func start() {
@@ -43,7 +43,7 @@ class SearchFlowCoordinator: Coordinator  {
 
 }
 
-extension SearchFlowCoordinator: SearchViewDelegate {
+extension SearchFlowCoordinator: SearchViewControllerDelegate {
     
     func navigateToNextPage(fullName: String) {
         presentDetailViewController(fullName: fullName)
