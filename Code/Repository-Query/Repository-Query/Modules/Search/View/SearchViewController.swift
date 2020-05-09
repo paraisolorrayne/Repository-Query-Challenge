@@ -12,22 +12,23 @@ protocol SearchViewControllerDelegate: class {
     func navigateToNextPage(fullName: String)
 }
 
-class SearchViewController: UIViewController {
+class SearchViewController: UIViewController, UISearchControllerDelegate {
 
-    @IBOutlet weak var searchBar: UISearchBar!
-    @IBOutlet weak var bodyView: UIView!
+
+    @IBOutlet weak var tableView: UITableView!
     // VARIABLES HERE
     var viewModel = SearchViewModel()
     weak var delegate: SearchViewControllerDelegate?
-    var tableView: UITableView! = nil
     var safeArea: UILayoutGuide!
     var model: [RepositoryItem]!
+    var resultSearchController = UISearchController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Repositórios"
         setupTableView()
         setupViewModel()
+        setupSearchBar()
     }
     
     fileprivate func setupViewModel() {
@@ -55,7 +56,7 @@ class SearchViewController: UIViewController {
             // show UI Server is Error
         }
         
-        self.viewModel.fetchRepositoryBy(languageName: "swift")
+        
         
         
         self.viewModel.didGetData = {
@@ -66,25 +67,38 @@ class SearchViewController: UIViewController {
         
     }
     
-    fileprivate func setStateScreen() {
-        
-        if viewModel.count == 0 {
-            let emptyView = UIView(frame: self.bodyView.bounds)
-            let emptyImage = UIImageView(image: UIImage(named: "empty"))
-            emptyView.addSubview(emptyImage)
-            bodyView.addSubview(emptyView)
-        } else {
-            setupTableView()
-        }
-    }
-    
     func setupTableView() {
-        tableView = UITableView(frame: bodyView.bounds)
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.backgroundColor = UIColor(hex: "#D2D3D5")
         safeArea = view.layoutMarginsGuide
         let nib = UINib(nibName: "RepositoryTableViewCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "\(RepositoryTableViewCell.self)")
-        bodyView.addSubview(tableView)
+        let nibEmpty = UINib(nibName: "EmptyTableViewCell", bundle: nil)
+        tableView.register(nibEmpty, forCellReuseIdentifier: "\(EmptyTableViewCell.self)")
+    }
+
+    func setupSearchBar() {
+        resultSearchController.delegate = self
+        resultSearchController = ({
+            let controller = UISearchController(searchResultsController: nil)
+            controller.searchResultsUpdater = self
+            controller.dimsBackgroundDuringPresentation = false
+            controller.searchBar.sizeToFit()
+            tableView.tableHeaderView = controller.searchBar
+            
+            return controller
+        })()
     }
 }
+
+extension SearchViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        if let text = searchController.searchBar.text {
+            self.viewModel.fetchRepositoryBy(languageName: text)
+            self.tableView.reloadData()
+        }
+    }
+}
+
+

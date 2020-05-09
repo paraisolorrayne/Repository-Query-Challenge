@@ -10,8 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchViewController" customModule="Repository_Query" customModuleProvider="target">
             <connections>
-                <outlet property="bodyView" destination="dcF-Bl-aj4" id="Nw2-Oi-EGa"/>
-                <outlet property="searchBar" destination="Zc9-iD-Z92" id="mWN-DL-b00"/>
+                <outlet property="tableView" destination="iyw-C0-4yy" id="1vY-ji-EXW"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,24 +19,21 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Zc9-iD-Z92">
-                    <rect key="frame" x="0.0" y="48" width="414" height="56"/>
-                    <textInputTraits key="textInputTraits"/>
-                </searchBar>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dcF-Bl-aj4">
-                    <rect key="frame" x="0.0" y="104" width="414" height="758"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iyw-C0-4yy">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                </view>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="o8o-i4-uoj"/>
+                        <outlet property="delegate" destination="-1" id="kJJ-6O-Q7P"/>
+                    </connections>
+                </tableView>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
-                <constraint firstItem="Zc9-iD-Z92" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="1Om-9P-w5X"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="dcF-Bl-aj4" secondAttribute="trailing" id="Cf3-ur-sxT"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="dcF-Bl-aj4" secondAttribute="bottom" id="Clg-fB-fSo"/>
-                <constraint firstItem="dcF-Bl-aj4" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ShH-eo-fh8"/>
-                <constraint firstItem="dcF-Bl-aj4" firstAttribute="top" secondItem="Zc9-iD-Z92" secondAttribute="bottom" id="jXZ-mH-nUe"/>
-                <constraint firstItem="Zc9-iD-Z92" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="oEe-wR-fzc"/>
-                <constraint firstItem="Zc9-iD-Z92" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="4" id="wrG-kO-JgN"/>
+                <constraint firstItem="iyw-C0-4yy" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="8SI-hg-D5K"/>
+                <constraint firstItem="iyw-C0-4yy" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="KIe-R5-etQ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="iyw-C0-4yy" secondAttribute="trailing" id="Z7E-tf-sZv"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="iyw-C0-4yy" secondAttribute="bottom" id="k47-OG-svS"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="287" y="191"/>

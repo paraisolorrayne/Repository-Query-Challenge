@@ -33,7 +33,12 @@ class RepositoryTableViewCell: UITableViewCell {
     }
 
     func configure(with model: RepositoryItem) {
-        authorImageView.downloaded(from:model.owner?.avatarUrl ?? "")
+        if let url = model.owner?.avatarUrl {
+            authorImageView.downloaded(from:url)
+        } else {
+            authorImageView.image = UIImage(named: "default-user")
+        }
+        
         repositoryNameLabel.text = model.name ?? ""
         repositoryDescriptionLabel.text = model.descriptionField ?? ""
         amountStarsLabel.text = "\(model.stargazersCount ?? 0)"

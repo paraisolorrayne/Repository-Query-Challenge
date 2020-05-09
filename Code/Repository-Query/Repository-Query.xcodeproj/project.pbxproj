@@ -32,6 +32,16 @@
 		391419752465CCAC00AB7D68 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 391419742465CCAC00AB7D68 /* DetailViewController.xib */; };
 		396575D12466183600B26E5C /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396575CF2466183600B26E5C /* SearchViewController.swift */; };
 		396575D22466183600B26E5C /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 396575D02466183600B26E5C /* SearchViewController.xib */; };
+		396575E0246622BB00B26E5C /* HomeViewControllerServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396575D7246622BB00B26E5C /* HomeViewControllerServiceProtocol.swift */; };
+		396575E1246622BB00B26E5C /* HomeViewControllerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396575D9246622BB00B26E5C /* HomeViewControllerModel.swift */; };
+		396575E2246622BB00B26E5C /* HomeViewControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396575DB246622BB00B26E5C /* HomeViewControllerView.swift */; };
+		396575E3246622BB00B26E5C /* HomeViewControllerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396575DD246622BB00B26E5C /* HomeViewControllerService.swift */; };
+		396575E4246622BB00B26E5C /* HomeViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396575DF246622BB00B26E5C /* HomeViewControllerViewModel.swift */; };
+		396575E7246622DA00B26E5C /* BuscaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396575E5246622DA00B26E5C /* BuscaViewController.swift */; };
+		396575E8246622DA00B26E5C /* BuscaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 396575E6246622DA00B26E5C /* BuscaViewController.xib */; };
+		396575EB2466279400B26E5C /* EmptyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396575E92466279400B26E5C /* EmptyTableViewCell.swift */; };
+		396575EC2466279400B26E5C /* EmptyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 396575EA2466279400B26E5C /* EmptyTableViewCell.xib */; };
+		396575EF2466286D00B26E5C /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396575EE2466286D00B26E5C /* UIColor+.swift */; };
 		39E2C27A24634C0100E06BF3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E2C27924634C0100E06BF3 /* AppDelegate.swift */; };
 		39E2C28124634C0400E06BF3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39E2C28024634C0400E06BF3 /* Assets.xcassets */; };
 		39E2C28424634C0400E06BF3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39E2C28224634C0400E06BF3 /* LaunchScreen.storyboard */; };
@@ -84,6 +94,16 @@
 		391419742465CCAC00AB7D68 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		396575CF2466183600B26E5C /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		396575D02466183600B26E5C /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
+		396575D7246622BB00B26E5C /* HomeViewControllerServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewControllerServiceProtocol.swift; sourceTree = "<group>"; };
+		396575D9246622BB00B26E5C /* HomeViewControllerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewControllerModel.swift; sourceTree = "<group>"; };
+		396575DB246622BB00B26E5C /* HomeViewControllerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewControllerView.swift; sourceTree = "<group>"; };
+		396575DD246622BB00B26E5C /* HomeViewControllerService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewControllerService.swift; sourceTree = "<group>"; };
+		396575DF246622BB00B26E5C /* HomeViewControllerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewControllerViewModel.swift; sourceTree = "<group>"; };
+		396575E5246622DA00B26E5C /* BuscaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuscaViewController.swift; sourceTree = "<group>"; };
+		396575E6246622DA00B26E5C /* BuscaViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BuscaViewController.xib; sourceTree = "<group>"; };
+		396575E92466279400B26E5C /* EmptyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyTableViewCell.swift; sourceTree = "<group>"; };
+		396575EA2466279400B26E5C /* EmptyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyTableViewCell.xib; sourceTree = "<group>"; };
+		396575EE2466286D00B26E5C /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		39E2C27624634C0100E06BF3 /* Repository-Query.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Repository-Query.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		39E2C27924634C0100E06BF3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		39E2C28024634C0400E06BF3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -149,6 +169,7 @@
 		3914191E24638E2B00AB7D68 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				396575D5246622BB00B26E5C /* HomeViewController */,
 				3914193624638F6500AB7D68 /* Search */,
 				3914192424638F4100AB7D68 /* Detail */,
 			);
@@ -307,8 +328,72 @@
 			children = (
 				3914195A2464FEE600AB7D68 /* RepositoryTableViewCell.xib */,
 				3914195C2464FEFE00AB7D68 /* RepositoryTableViewCell.swift */,
+				396575E92466279400B26E5C /* EmptyTableViewCell.swift */,
+				396575EA2466279400B26E5C /* EmptyTableViewCell.xib */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		396575D5246622BB00B26E5C /* HomeViewController */ = {
+			isa = PBXGroup;
+			children = (
+				396575D6246622BB00B26E5C /* Protocol */,
+				396575D8246622BB00B26E5C /* Model */,
+				396575DA246622BB00B26E5C /* View */,
+				396575DC246622BB00B26E5C /* Service */,
+				396575DE246622BB00B26E5C /* View Model */,
+			);
+			path = HomeViewController;
+			sourceTree = "<group>";
+		};
+		396575D6246622BB00B26E5C /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				396575D7246622BB00B26E5C /* HomeViewControllerServiceProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		396575D8246622BB00B26E5C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				396575D9246622BB00B26E5C /* HomeViewControllerModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		396575DA246622BB00B26E5C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				396575DB246622BB00B26E5C /* HomeViewControllerView.swift */,
+				396575E5246622DA00B26E5C /* BuscaViewController.swift */,
+				396575E6246622DA00B26E5C /* BuscaViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		396575DC246622BB00B26E5C /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				396575DD246622BB00B26E5C /* HomeViewControllerService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		396575DE246622BB00B26E5C /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				396575DF246622BB00B26E5C /* HomeViewControllerViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		396575ED2466285C00B26E5C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				396575EE2466286D00B26E5C /* UIColor+.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		39E2C26D24634C0100E06BF3 = {
@@ -336,6 +421,7 @@
 		39E2C27824634C0100E06BF3 /* Repository-Query */ = {
 			isa = PBXGroup;
 			children = (
+				396575ED2466285C00B26E5C /* Extensions */,
 				391419522463978E00AB7D68 /* API */,
 				3914194624638F7E00AB7D68 /* Navigation */,
 				3914191E24638E2B00AB7D68 /* Modules */,
@@ -484,7 +570,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				396575EC2466279400B26E5C /* EmptyTableViewCell.xib in Resources */,
 				39E2C28424634C0400E06BF3 /* LaunchScreen.storyboard in Resources */,
+				396575E8246622DA00B26E5C /* BuscaViewController.xib in Resources */,
 				39E2C28124634C0400E06BF3 /* Assets.xcassets in Resources */,
 				391419752465CCAC00AB7D68 /* DetailViewController.xib in Resources */,
 				3914195B2464FEE600AB7D68 /* RepositoryTableViewCell.xib in Resources */,
@@ -617,14 +705,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				39141956246397EA00AB7D68 /* Reach.swift in Sources */,
+				396575E4246622BB00B26E5C /* HomeViewControllerViewModel.swift in Sources */,
 				3914193224638F4100AB7D68 /* DetailService.swift in Sources */,
 				3914194E2463935C00AB7D68 /* DetailFlowCoordinator.swift in Sources */,
+				396575E3246622BB00B26E5C /* HomeViewControllerService.swift in Sources */,
 				3914193024638F4100AB7D68 /* DetailModel.swift in Sources */,
 				39141969246525C700AB7D68 /* AppCoordinator.swift in Sources */,
 				391419662465055C00AB7D68 /* RepositoryOwner.swift in Sources */,
 				3914194424638F6500AB7D68 /* SearchService.swift in Sources */,
 				3914193324638F4100AB7D68 /* DetailViewModel.swift in Sources */,
 				3914195D2464FEFE00AB7D68 /* RepositoryTableViewCell.swift in Sources */,
+				396575E1246622BB00B26E5C /* HomeViewControllerModel.swift in Sources */,
 				3914194224638F6500AB7D68 /* SearchModel.swift in Sources */,
 				391419672465055C00AB7D68 /* RepositoryItem.swift in Sources */,
 				3914194524638F6500AB7D68 /* SearchViewModel.swift in Sources */,
@@ -633,11 +724,16 @@
 				39141954246397B200AB7D68 /* APIManager.swift in Sources */,
 				391419652465055C00AB7D68 /* RepositoryLicense.swift in Sources */,
 				3914192F24638F4100AB7D68 /* DetailServiceProtocol.swift in Sources */,
+				396575E0246622BB00B26E5C /* HomeViewControllerServiceProtocol.swift in Sources */,
+				396575E7246622DA00B26E5C /* BuscaViewController.swift in Sources */,
 				3914197324658CAF00AB7D68 /* DetailPath.swift in Sources */,
 				3914193124638F4100AB7D68 /* DetailView.swift in Sources */,
+				396575EB2466279400B26E5C /* EmptyTableViewCell.swift in Sources */,
 				3914196B2465266B00AB7D68 /* SearchFlowCoordinator.swift in Sources */,
 				39E2C27A24634C0100E06BF3 /* AppDelegate.swift in Sources */,
+				396575E2246622BB00B26E5C /* HomeViewControllerView.swift in Sources */,
 				3914194124638F6500AB7D68 /* SearchServiceProtocol.swift in Sources */,
+				396575EF2466286D00B26E5C /* UIColor+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

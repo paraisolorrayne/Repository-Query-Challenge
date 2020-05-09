@@ -17,12 +17,11 @@ class SearchService: SearchServiceProtocol {
         let url = "search/repositories"
 
         let parameters: Parameters = [
-            "q": "language",
+            "q": "repositories",
             "language": "\(languageName)",
             "sort": "stars",
             "order": "desc",
             "page": "1",
-            "per_page": "1"
         ]
         
         APIManager.request(
