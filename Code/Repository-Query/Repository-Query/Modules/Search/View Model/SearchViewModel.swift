@@ -12,14 +12,16 @@ class SearchViewModel {
 
     private let service: SearchServiceProtocol
 
-    private var model: [SearchModel] = [SearchModel]() {
+    var model: [SearchModel] = [SearchModel]() {
         didSet {
-            self.count = self.model.count
+            self.items = self.model.first?.items as! [RepositoryItem]
+            self.count = self.items.count as! Int
         }
     }
 
     /// Count your data in model
     var count: Int = 0
+    var items: [RepositoryItem] = []
 
     //MARK: -- Network checking
 
@@ -74,17 +76,17 @@ class SearchViewModel {
     }
 
     //MARK: -- Example Func
-    func exampleBind() {
+    func fetchRepositoryBy(languageName: String) {
         switch networkStatus {
         case .offline:
             self.isDisconnected = true
             self.internetConnectionStatus?()
         case .online:
             // call your service here
-            self.service.removeThisFuncName(success: { data in
+            self.service.fetchRepositoryBy(languageName: languageName, success: { data in
                 
                 self.isLoading = false
-//                self.model = data
+                self.model = [data]
                 self.didGetData?()
                 
             }) {

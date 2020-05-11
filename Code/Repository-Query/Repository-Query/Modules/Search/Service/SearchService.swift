@@ -12,15 +12,23 @@ import Alamofire
 class SearchService: SearchServiceProtocol {
     // Call protocol function
 
-    func removeThisFuncName(success: @escaping(_ data: SearchModel) -> (), failure: @escaping() -> ()) {
+    func fetchRepositoryBy(languageName: String, success: @escaping(_ data: SearchModel) -> (), failure: @escaping() -> ()) {
 
-        let url = ""
+        let url = "search/repositories"
 
+        let parameters: Parameters = [
+            "q": "repositories",
+            "language": "\(languageName)",
+            "sort": "stars",
+            "order": "desc",
+            "page": "1",
+        ]
+        
         APIManager.request(
             url,
             method: .get,
-            parameters: [:],
-            encoding: URLEncoding.default,
+            parameters: parameters,
+            encoding: URLEncoding(destination: .queryString),
             headers: [:],
             completion: { data in
                 

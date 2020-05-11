@@ -37,19 +37,32 @@ To run some unit tests you have to:
 
 ```
 <MODULE_NAME>
-├── Coordinators
+├── Coordinator
 │   └── <MODULE_NAME>Coordinator.swift
 ├── ViewControllers
 │   └── <MODULE_NAME>ViewController.swift
 └── ViewModels
-    └── <MODULE_NAME>ViewModel.swift
+│   └── <MODULE_NAME>ViewModel.swift
+└── Model
+    └── <MODULE_NAME>Model.swift
+
 ```
 
 ### UI development
 - XIB
 
-### Good Practices
-- SwiftLint
+### API Documentation
+
+[GitHub REST API v3](https://developer.github.com/v3) 
+Usage in this project
+##### BaseURL:
+- [URL](https://api.github.com)
+
+- Find repo from language by most popular
+ `{baseURL}/search/repositories?q=repositories&language:{languageName}&sort=stars&order=desc&page={}&per_page={page_size}`
+
+- Find readme
+ `{baseURL}/repos/{login}}/{name}/contents/README.md?ref=master`
 
 ### Network Layer Pattern
 - APIManager with [Alamofire](https://github.com/Alamofire/Alamofire)

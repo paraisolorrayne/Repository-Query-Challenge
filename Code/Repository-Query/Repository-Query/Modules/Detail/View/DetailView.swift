@@ -7,19 +7,40 @@
 //
 
 import UIKit
+import MarkdownView
+import SafariServices
+
+protocol DetailViewDelegate: class {
+    func navigateToPreviousPage()
+}
 
 class DetailView: UIViewController {
 
     // OUTLETS HERE
-
     // VARIABLES HERE
     var viewModel = DetailViewModel()
+    weak var delegate: DetailViewDelegate?
+    
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.setupViewModel()
+    let fullName: String
+    let repoName: String
+    
+    init?(fullName: String, repoName: String) {
+        self.fullName = fullName
+        self.repoName = repoName
+        super.init(nibName: nil, bundle: nil)
     }
     
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        title = repoName
+        self.setupViewModel()
+    }
+
     fileprivate func setupViewModel() {
 
         self.viewModel.showAlertClosure = {
@@ -45,12 +66,38 @@ class DetailView: UIViewController {
             // show UI Server is Error
         }
 
+        self.viewModel.fetchReadme(with: fullName)
         self.viewModel.didGetData = {
-            // update UI after get data
+            DispatchQueue.main.async {
+                self.renderReadme(base64String: self.viewModel.base64String)
+            }
         }
+        
 
     }
-    
+
+    fileprivate func renderReadme(base64String: String) {
+        let decodedData = Data(base64Encoded: base64String, options: .ignoreUnknownCharacters)!
+        let decodedString = String(data: decodedData, encoding: .utf8)!
+        let markDownView = MarkdownView()
+        markDownView.frame = view.frame
+        view.addSubview(markDownView)
+        markDownView.load(markdown: decodedString)
+        // called when user touch link
+        markDownView.onTouchLink = { [weak self] request in
+            guard let url = request.url else { return false }
+            
+            if url.scheme == "file" {
+                return false
+            } else if url.scheme == "https" {
+                let safari = SFSafariViewController(url: url)
+                self?.navigationController?.pushViewController(safari, animated: true)
+                return false
+            } else {
+                return false
+            }
+        }
+    }
 }
 
 

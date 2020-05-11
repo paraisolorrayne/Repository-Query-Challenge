@@ -1,2 +1,3 @@
 ${PODS_ROOT}/Target Support Files/Pods-Repository-Query/Pods-Repository-Query-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
+${BUILT_PRODUCTS_DIR}/MarkdownView/MarkdownView.framework

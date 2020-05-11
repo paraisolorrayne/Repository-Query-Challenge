@@ -7,6 +7,8 @@ target 'Repository-Query' do
 
   # Pods for Repository-Query
   pod 'Alamofire'
+  pod "MarkdownView"
+  
   target 'Repository-QueryTests' do
     inherit! :search_paths
     # Pods for testing

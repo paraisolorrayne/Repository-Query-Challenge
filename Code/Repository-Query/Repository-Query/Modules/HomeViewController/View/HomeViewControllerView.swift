@@ -1,24 +1,19 @@
 //  
-//  SearchView.swift
+//  HomeViewControllerView.swift
 //  Repository-Query
 //
-//  Created by Lorrayne Paraiso on 06/05/20.
+//  Created by Lorrayne Paraiso on 08/05/20.
 //  Copyright © 2020 Zee-Dog. All rights reserved.
 //
 
 import UIKit
 
-protocol SearchViewDelegate: class {
-    func navigateToNextPage()
-}
-
-class SearchView: UIViewController {
+class HomeViewControllerView: UIViewController {
 
     // OUTLETS HERE
 
     // VARIABLES HERE
-    var viewModel = SearchViewModel()
-    weak var delegate: SearchViewDelegate?
+    var viewModel = HomeViewControllerViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,10 +49,6 @@ class SearchView: UIViewController {
             // update UI after get data
         }
 
-    }
-
-    @IBAction func goToSecondPageAction(_ sender: Any) {
-        self.delegate?.navigateToNextPage()
     }
     
 }
