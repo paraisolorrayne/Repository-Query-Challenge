@@ -9,7 +9,7 @@
 import UIKit
 
 protocol SearchViewControllerDelegate: class {
-    func navigateToNextPage(fullName: String)
+    func navigateToNextPage(fullName: String, repoName: String)
 }
 
 class SearchViewController: UIViewController, UISearchControllerDelegate {

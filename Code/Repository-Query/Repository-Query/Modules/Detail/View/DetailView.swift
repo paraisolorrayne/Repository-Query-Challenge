@@ -23,9 +23,11 @@ class DetailView: UIViewController {
     
 
     let fullName: String
+    let repoName: String
     
-    init?(fullName: String) {
+    init?(fullName: String, repoName: String) {
         self.fullName = fullName
+        self.repoName = repoName
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -35,6 +37,7 @@ class DetailView: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = repoName
         self.setupViewModel()
     }
 

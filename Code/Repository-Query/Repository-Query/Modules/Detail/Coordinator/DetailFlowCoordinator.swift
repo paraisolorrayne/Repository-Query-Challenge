@@ -18,7 +18,7 @@ class DetailFlowCoordinator: Coordinator  {
     
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
-        self.detailViewController = DetailView(fullName: "")!
+        self.detailViewController = DetailView(fullName: "", repoName: "")!
     }
     
     func start() {

@@ -43,8 +43,9 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let full_name = self.viewModel.items[indexPath.row].fullName ?? ""
+        let repoName = self.viewModel.items[indexPath.row].name ?? ""
         tableView.tableHeaderView = nil
-        self.delegate?.navigateToNextPage(fullName: full_name)
+        self.delegate?.navigateToNextPage(fullName: full_name, repoName: repoName)
         
     }
 

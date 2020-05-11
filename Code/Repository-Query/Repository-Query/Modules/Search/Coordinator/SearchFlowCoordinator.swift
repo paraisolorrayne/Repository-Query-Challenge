@@ -35,8 +35,8 @@ class SearchFlowCoordinator: Coordinator  {
         navigationController.dismiss(animated: true, completion: nil)
     }
 
-    fileprivate func presentDetailViewController(fullName: String) {
-        let detailsViewController = DetailView(fullName: fullName)
+    fileprivate func presentDetailViewController(fullName: String, repoName: String) {
+        let detailsViewController = DetailView(fullName: fullName, repoName: repoName)
         navigationController.pushViewController(detailsViewController!, animated: true)
         
     }
@@ -45,7 +45,7 @@ class SearchFlowCoordinator: Coordinator  {
 
 extension SearchFlowCoordinator: SearchViewControllerDelegate {
     
-    func navigateToNextPage(fullName: String) {
-        presentDetailViewController(fullName: fullName)
+    func navigateToNextPage(fullName: String, repoName: String) {
+        presentDetailViewController(fullName: fullName, repoName: repoName)
     }
 }
